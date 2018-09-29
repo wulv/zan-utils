@@ -4,6 +4,7 @@
   "description": "",
   "main": "./lib/cjs/index.js",
   "module": "./lib/es/index.js",
+  "browser": "./lib/umd/index.js",
   "typings": "./typing/index.d.ts",
   "scripts": {
     "test": "jest"
@@ -12,12 +13,16 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "@types/jest": "^23.3.2",
     "esdoc": "^1.1.0",
     "esdoc-standard-plugin": "^1.0.0",
     "esdoc-typescript-plugin": "^1.0.1",
     "gulp": "^3.9.1",
     "gulp-typescript": "^5.0.0-alpha.3",
     "jest": "^23.4.2",
+    "ts-jest": "^23.10.2",
+    "tslint": "^5.11.0",
+    "tslint-eslint-rules": "^5.4.0",
     "typescript": "^3.0.1"
   }
 }
