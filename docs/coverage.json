@@ -3,24 +3,24 @@
   "expectCount": 5,
   "actualCount": 4,
   "files": {
-    "lib/money/formatLargeNumber.js": {
+    "es/money/formatLargeNumber.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []
     },
-    "lib/money/tozhCn.js": {
+    "es/money/tozhCn.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []
     },
-    "lib/string/bem.js": {
+    "es/string/bem.js": {
       "expectCount": 2,
       "actualCount": 1,
       "undocumentLines": [
         1
       ]
     },
-    "lib/validate/chinaMobile.js": {
+    "es/validate/chinaMobile.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []

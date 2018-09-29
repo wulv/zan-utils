@@ -12,6 +12,23 @@ function toClass(classes, prefix = '') {
     '',
   );
 }
+
+interface IBemOptions {
+  prefix?: string,
+  block:string,
+  elementPrefix?: string,
+  modifierPrefix?: string
+}
+
+/**
+ * @callback BemHOF
+ * @param {string} [element='']
+ * @param {string} [modifier='']
+ * @param {string} [utils='']
+ * @returns
+ */
+
+
 /**
  * @memberof module:string
  * @desc
@@ -66,14 +83,14 @@ function toClass(classes, prefix = '') {
  * cx('main', { active: true, show: false, disabled: { relative: true } }, 'auto-width')
  * // 'prepaid__main prepaid__main--active prepaid__main--disabled auto-width'
  * ```
+ * @param {object} options
+ * @param {string} options.[prefix]
+ * @param {string} options.block
+ * @param {string} options.[elementPrefix]
+ * @param {string} options.[modifierPrefix]
+ * @return {BemHOF}
  */
-
-function bem({ prefix = '', block, elementPrefix = '__', modifierPrefix = '--' }: {
-  prefix?: string, 
-  block:string, 
-  elementPrefix?: string,  
-  modifierPrefix?: string
- }): (element?: string, modifier?: string, utils?: string) => string {
+function bem({ prefix = '', block, elementPrefix = '__', modifierPrefix = '--' }: IBemOptions): (element?: string, modifier?: string, utils?: string) => string {
   return function (element = '', modifier = '', utils = '') {
     const blockClass = `${prefix}${block}`;
     const elementClass = element

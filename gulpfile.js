@@ -1,30 +1,44 @@
 const gulp = require("gulp");
 const ts = require("gulp-typescript");
-const tsProject = ts.createProject("tsconfig.json");
-const dts = require('dts-generator').default;
 const Esdoc = require("esdoc").default;
 const esdocConfig = require('./.esdoc.json');
 
-gulp.task('definitions', function(done) {
-  dts({
-    name: 'zan-utils',
-    project: './',
-    baseDir: 'src/',
-    resolveModuleId: (params) => {
-      return params.currentModuleId.replace(/^src/, 'zan-utils/lib')
-    },
-    out: 'typing/index.d.ts'
-  }).then(done);
-});
-
-gulp.task('esdoc', function() {
+gulp.task('doc', function() {
   Esdoc.generate(esdocConfig);
 });
 
-gulp.task('build', function () {
-  return tsProject.src()
-    .pipe(tsProject())
-    .js.pipe(gulp.dest("lib"));
+gulp.task('typing', function () {
+  const tsProject = ts.createProject('tsconfig.json', {
+    removeComments: true,
+  });
+  const tsResult = tsProject.src().pipe(tsProject());
+  return tsResult.dts.pipe(gulp.dest('typing'));
+})
+
+gulp.task('build:es', function () {
+  const tsProject = ts.createProject('tsconfig.json', {
+    module: 'esnext'
+  });
+  const tsResult = tsProject.src().pipe(tsProject());
+  return tsResult.js.pipe(gulp.dest('lib/es'));
 });
 
-gulp.task('default', ['build', 'definitions', 'esdoc']);
+gulp.task('build:umd', function () {
+  const tsProject = ts.createProject('tsconfig.json', {
+    module: 'umd'
+  });
+  const tsResult = tsProject.src().pipe(tsProject());
+  return tsResult.js.pipe(gulp.dest('lib/umd'));
+});
+
+gulp.task('build:commonjs', function () {
+  const tsProject = ts.createProject('tsconfig.json', {
+    module: 'commonjs'
+  });
+  const tsResult = tsProject.src().pipe(tsProject());
+  return tsResult.js.pipe(gulp.dest('lib/cjs'));
+});
+
+gulp.task('build', ['build:es', 'build:umd', 'build:commonjs']);
+
+gulp.task('default', ['build', 'doc', 'typing']);

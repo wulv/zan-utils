@@ -1,12 +1,17 @@
 {
   "compilerOptions": {
-      "target": "ES6"
+    "alwaysStrict": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "declarationDir": "./typing",
+    "declaration": true
   },
   "include": [
-      "src/**/*"
+    "src/**/*"
   ],
   "exclude": [
-      "node_modules",
-      "**/*.spec.ts"
+    "node_modules",
+    "**/*.spec.ts"
   ]
 }

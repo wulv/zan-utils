@@ -1,356 +1,356 @@
 window.esdocSearchIndex = [
   [
-    "zan-utils/lib/string/bem.js~bem",
+    "zan-utils/es/string/bem.js~bem",
     "function/index.html#static-function-bem",
-    "<span>bem</span> <span class=\"search-result-import-path\">zan-utils/lib/string/bem.js</span>",
+    "<span>bem</span> <span class=\"search-result-import-path\">zan-utils/es/string/bem.js</span>",
     "function"
   ],
   [
-    "zan-utils/lib/validate/chinamobile.js~chinamobile",
+    "zan-utils/es/validate/chinamobile.js~chinamobile",
     "function/index.html#static-function-chinaMobile",
-    "<span>chinaMobile</span> <span class=\"search-result-import-path\">zan-utils/lib/validate/chinaMobile.js</span>",
+    "<span>chinaMobile</span> <span class=\"search-result-import-path\">zan-utils/es/validate/chinaMobile.js</span>",
     "function"
   ],
   [
-    "zan-utils/lib/money/formatlargenumber.js~formatlargenumber",
+    "zan-utils/es/money/formatlargenumber.js~formatlargenumber",
     "function/index.html#static-function-formatLargeNumber",
-    "<span>formatLargeNumber</span> <span class=\"search-result-import-path\">zan-utils/lib/money/formatLargeNumber.js</span>",
+    "<span>formatLargeNumber</span> <span class=\"search-result-import-path\">zan-utils/es/money/formatLargeNumber.js</span>",
     "function"
   ],
   [
-    "zan-utils/lib/money/tozhcn.js~tozhcn",
+    "zan-utils/es/money/tozhcn.js~tozhcn",
     "function/index.html#static-function-tozhCN",
-    "<span>tozhCN</span> <span class=\"search-result-import-path\">zan-utils/lib/money/tozhCn.js</span>",
+    "<span>tozhCN</span> <span class=\"search-result-import-path\">zan-utils/es/money/tozhCn.js</span>",
     "function"
   ],
   [
-    "lib/.external-ecmascript.js~array",
+    "es/.external-ecmascript.js~array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
-    "lib/.external-ecmascript.js~Array",
+    "es/.external-ecmascript.js~Array",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~arraybuffer",
+    "es/.external-ecmascript.js~arraybuffer",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
-    "lib/.external-ecmascript.js~ArrayBuffer",
+    "es/.external-ecmascript.js~ArrayBuffer",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~boolean",
+    "es/.external-ecmascript.js~boolean",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
-    "lib/.external-ecmascript.js~Boolean",
+    "es/.external-ecmascript.js~Boolean",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~dataview",
+    "es/.external-ecmascript.js~dataview",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
-    "lib/.external-ecmascript.js~DataView",
+    "es/.external-ecmascript.js~DataView",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~date",
+    "es/.external-ecmascript.js~date",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
-    "lib/.external-ecmascript.js~Date",
+    "es/.external-ecmascript.js~Date",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~error",
+    "es/.external-ecmascript.js~error",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
-    "lib/.external-ecmascript.js~Error",
+    "es/.external-ecmascript.js~Error",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~evalerror",
+    "es/.external-ecmascript.js~evalerror",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
-    "lib/.external-ecmascript.js~EvalError",
+    "es/.external-ecmascript.js~EvalError",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~float32array",
+    "es/.external-ecmascript.js~float32array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
-    "lib/.external-ecmascript.js~Float32Array",
+    "es/.external-ecmascript.js~Float32Array",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~float64array",
+    "es/.external-ecmascript.js~float64array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
-    "lib/.external-ecmascript.js~Float64Array",
+    "es/.external-ecmascript.js~Float64Array",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~function",
+    "es/.external-ecmascript.js~function",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
-    "lib/.external-ecmascript.js~Function",
+    "es/.external-ecmascript.js~Function",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~generator",
+    "es/.external-ecmascript.js~generator",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
-    "lib/.external-ecmascript.js~Generator",
+    "es/.external-ecmascript.js~Generator",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~generatorfunction",
+    "es/.external-ecmascript.js~generatorfunction",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
-    "lib/.external-ecmascript.js~GeneratorFunction",
+    "es/.external-ecmascript.js~GeneratorFunction",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~infinity",
+    "es/.external-ecmascript.js~infinity",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
-    "lib/.external-ecmascript.js~Infinity",
+    "es/.external-ecmascript.js~Infinity",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~int16array",
+    "es/.external-ecmascript.js~int16array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
-    "lib/.external-ecmascript.js~Int16Array",
+    "es/.external-ecmascript.js~Int16Array",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~int32array",
+    "es/.external-ecmascript.js~int32array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
-    "lib/.external-ecmascript.js~Int32Array",
+    "es/.external-ecmascript.js~Int32Array",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~int8array",
+    "es/.external-ecmascript.js~int8array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
-    "lib/.external-ecmascript.js~Int8Array",
+    "es/.external-ecmascript.js~Int8Array",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~internalerror",
+    "es/.external-ecmascript.js~internalerror",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
-    "lib/.external-ecmascript.js~InternalError",
+    "es/.external-ecmascript.js~InternalError",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~json",
+    "es/.external-ecmascript.js~json",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
-    "lib/.external-ecmascript.js~JSON",
+    "es/.external-ecmascript.js~JSON",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~map",
+    "es/.external-ecmascript.js~map",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
-    "lib/.external-ecmascript.js~Map",
+    "es/.external-ecmascript.js~Map",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~nan",
+    "es/.external-ecmascript.js~nan",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
-    "lib/.external-ecmascript.js~NaN",
+    "es/.external-ecmascript.js~NaN",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~number",
+    "es/.external-ecmascript.js~number",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
-    "lib/.external-ecmascript.js~Number",
+    "es/.external-ecmascript.js~Number",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~object",
+    "es/.external-ecmascript.js~object",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
-    "lib/.external-ecmascript.js~Object",
+    "es/.external-ecmascript.js~Object",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~promise",
+    "es/.external-ecmascript.js~promise",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
-    "lib/.external-ecmascript.js~Promise",
+    "es/.external-ecmascript.js~Promise",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~proxy",
+    "es/.external-ecmascript.js~proxy",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
-    "lib/.external-ecmascript.js~Proxy",
+    "es/.external-ecmascript.js~Proxy",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~rangeerror",
+    "es/.external-ecmascript.js~rangeerror",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
-    "lib/.external-ecmascript.js~RangeError",
+    "es/.external-ecmascript.js~RangeError",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~referenceerror",
+    "es/.external-ecmascript.js~referenceerror",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
-    "lib/.external-ecmascript.js~ReferenceError",
+    "es/.external-ecmascript.js~ReferenceError",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~reflect",
+    "es/.external-ecmascript.js~reflect",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
-    "lib/.external-ecmascript.js~Reflect",
+    "es/.external-ecmascript.js~Reflect",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~regexp",
+    "es/.external-ecmascript.js~regexp",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
-    "lib/.external-ecmascript.js~RegExp",
+    "es/.external-ecmascript.js~RegExp",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~set",
+    "es/.external-ecmascript.js~set",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
-    "lib/.external-ecmascript.js~Set",
+    "es/.external-ecmascript.js~Set",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~string",
+    "es/.external-ecmascript.js~string",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
-    "lib/.external-ecmascript.js~String",
+    "es/.external-ecmascript.js~String",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~symbol",
+    "es/.external-ecmascript.js~symbol",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
-    "lib/.external-ecmascript.js~Symbol",
+    "es/.external-ecmascript.js~Symbol",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~syntaxerror",
+    "es/.external-ecmascript.js~syntaxerror",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
-    "lib/.external-ecmascript.js~SyntaxError",
+    "es/.external-ecmascript.js~SyntaxError",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~typeerror",
+    "es/.external-ecmascript.js~typeerror",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
-    "lib/.external-ecmascript.js~TypeError",
+    "es/.external-ecmascript.js~TypeError",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~urierror",
+    "es/.external-ecmascript.js~urierror",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
-    "lib/.external-ecmascript.js~URIError",
+    "es/.external-ecmascript.js~URIError",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~uint16array",
+    "es/.external-ecmascript.js~uint16array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
-    "lib/.external-ecmascript.js~Uint16Array",
+    "es/.external-ecmascript.js~Uint16Array",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~uint32array",
+    "es/.external-ecmascript.js~uint32array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
-    "lib/.external-ecmascript.js~Uint32Array",
+    "es/.external-ecmascript.js~Uint32Array",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~uint8array",
+    "es/.external-ecmascript.js~uint8array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
-    "lib/.external-ecmascript.js~Uint8Array",
+    "es/.external-ecmascript.js~Uint8Array",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~uint8clampedarray",
+    "es/.external-ecmascript.js~uint8clampedarray",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
-    "lib/.external-ecmascript.js~Uint8ClampedArray",
+    "es/.external-ecmascript.js~Uint8ClampedArray",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~weakmap",
+    "es/.external-ecmascript.js~weakmap",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
-    "lib/.external-ecmascript.js~WeakMap",
+    "es/.external-ecmascript.js~WeakMap",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~weakset",
+    "es/.external-ecmascript.js~weakset",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
-    "lib/.external-ecmascript.js~WeakSet",
+    "es/.external-ecmascript.js~WeakSet",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~boolean",
+    "es/.external-ecmascript.js~boolean",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
-    "lib/.external-ecmascript.js~boolean",
+    "es/.external-ecmascript.js~boolean",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~function",
+    "es/.external-ecmascript.js~function",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
-    "lib/.external-ecmascript.js~function",
+    "es/.external-ecmascript.js~function",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~null",
+    "es/.external-ecmascript.js~null",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
-    "lib/.external-ecmascript.js~null",
+    "es/.external-ecmascript.js~null",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~number",
+    "es/.external-ecmascript.js~number",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
-    "lib/.external-ecmascript.js~number",
+    "es/.external-ecmascript.js~number",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~object",
+    "es/.external-ecmascript.js~object",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
-    "lib/.external-ecmascript.js~object",
+    "es/.external-ecmascript.js~object",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~string",
+    "es/.external-ecmascript.js~string",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
-    "lib/.external-ecmascript.js~string",
+    "es/.external-ecmascript.js~string",
     "external"
   ],
   [
-    "lib/.external-ecmascript.js~undefined",
+    "es/.external-ecmascript.js~undefined",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
-    "lib/.external-ecmascript.js~undefined",
+    "es/.external-ecmascript.js~undefined",
     "external"
   ],
   [
-    "lib/index.js",
-    "file/lib/index.js.html",
-    "lib/index.js",
+    "es/index.js",
+    "file/es/index.js.html",
+    "es/index.js",
     "file"
   ],
   [
-    "lib/money/formatlargenumber.js",
-    "file/lib/money/formatLargeNumber.js.html",
-    "lib/money/formatLargeNumber.js",
+    "es/money/formatlargenumber.js",
+    "file/es/money/formatLargeNumber.js.html",
+    "es/money/formatLargeNumber.js",
     "file"
   ],
   [
-    "lib/money/index.js",
-    "file/lib/money/index.js.html",
-    "lib/money/index.js",
+    "es/money/index.js",
+    "file/es/money/index.js.html",
+    "es/money/index.js",
     "file"
   ],
   [
-    "lib/money/tozhcn.js",
-    "file/lib/money/tozhCn.js.html",
-    "lib/money/tozhCn.js",
+    "es/money/tozhcn.js",
+    "file/es/money/tozhCn.js.html",
+    "es/money/tozhCn.js",
     "file"
   ],
   [
-    "lib/string/bem.js",
-    "file/lib/string/bem.js.html",
-    "lib/string/bem.js",
+    "es/string/bem.js",
+    "file/es/string/bem.js.html",
+    "es/string/bem.js",
     "file"
   ],
   [
-    "lib/string/index.js",
-    "file/lib/string/index.js.html",
-    "lib/string/index.js",
+    "es/string/index.js",
+    "file/es/string/index.js.html",
+    "es/string/index.js",
     "file"
   ],
   [
-    "lib/validate/chinamobile.js",
-    "file/lib/validate/chinaMobile.js.html",
-    "lib/validate/chinaMobile.js",
+    "es/validate/chinamobile.js",
+    "file/es/validate/chinaMobile.js.html",
+    "es/validate/chinaMobile.js",
     "file"
   ],
   [
-    "lib/validate/index.js",
-    "file/lib/validate/index.js.html",
-    "lib/validate/index.js",
+    "es/validate/index.js",
+    "file/es/validate/index.js.html",
+    "es/validate/index.js",
     "file"
   ]
 ]

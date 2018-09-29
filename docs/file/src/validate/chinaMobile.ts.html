@@ -41,7 +41,7 @@
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
  * &#x6821;&#x9A8C;&#x4E2D;&#x56FD;&#x624B;&#x673A;&#x53F7;
  * @memberof module:validate
- * @param {number|string} value - &#x624B;&#x673A;&#x53F7;
+ * @param {number | string} value - &#x624B;&#x673A;&#x53F7;
  * @return {boolean}
  * @example
  * const chinaMobile = require(&apos;zan-utils/validate/chinaMobile&apos;);
@@ -49,7 +49,7 @@
  * chinaMobile(&apos;13170273187g&apos;); // false
  */
 
-function chinaMobile(value: number|string):boolean {
+function chinaMobile(value: number | string):boolean {
   return /^((\+86)|(86))?(13[0-9]|15[012356789]|17[3678]|18[0-9]|14[57])[0-9]{8}$/.test(String(value));
 }
 export default chinaMobile;
