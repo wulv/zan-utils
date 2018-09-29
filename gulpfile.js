@@ -20,7 +20,7 @@ gulp.task('build:es', function () {
     module: 'esnext',
   });
   const tsResult = tsProject.src().pipe(tsProject());
-  return tsResult.js.pipe(gulp.dest('lib/es'));
+  return tsResult.js.pipe(gulp.dest('es'));
 });
 
 gulp.task('build:umd', function () {
@@ -28,7 +28,7 @@ gulp.task('build:umd', function () {
     module: 'umd',
   });
   const tsResult = tsProject.src().pipe(tsProject());
-  return tsResult.js.pipe(gulp.dest('lib/umd'));
+  return tsResult.js.pipe(gulp.dest('umd'));
 });
 
 gulp.task('build:commonjs', function () {
@@ -36,7 +36,7 @@ gulp.task('build:commonjs', function () {
     module: 'commonjs',
   });
   const tsResult = tsProject.src().pipe(tsProject());
-  return tsResult.js.pipe(gulp.dest('lib/cjs'));
+  return tsResult.js.pipe(gulp.dest('cjs'));
 });
 
 gulp.task('build', ['build:es', 'build:umd', 'build:commonjs']);

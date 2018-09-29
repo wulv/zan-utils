@@ -2,9 +2,9 @@
   "name": "zan-utils",
   "version": "1.0.0",
   "description": "",
-  "main": "./lib/cjs/index.js",
-  "module": "./lib/es/index.js",
-  "browser": "./lib/umd/index.js",
+  "main": "./cjs/index.js",
+  "module": "./es/index.js",
+  "esnext": "./es/index.js",
   "typings": "./typing/index.d.ts",
   "scripts": {
     "test": "jest"
