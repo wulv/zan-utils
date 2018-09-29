@@ -4,13 +4,17 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "./bem"], factory);
+        define(["require", "exports", "./money", "./string", "./validate"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const bem_1 = require("./bem");
+    const money_1 = require("./money");
+    const string_1 = require("./string");
+    const validate_1 = require("./validate");
     exports.default = {
-        bem: bem_1.default
+        money: money_1.default,
+        string: string_1.default,
+        validate: validate_1.default,
     };
 });

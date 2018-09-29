@@ -1,8 +1,8 @@
-import formatLargeNumber from "./formatLargeNumber";
-import tozhCn from "./tozhCn";
+import formatLargeNumber from './formatLargeNumber';
+import tozhCN from './tozhCN';
 declare const _default: {
     formatLargeNumber: typeof formatLargeNumber;
-    tozhCn: typeof tozhCn;
+    tozhCN: typeof tozhCN;
 };
 export default _default;
 //# sourceMappingURL=index.d.ts.map

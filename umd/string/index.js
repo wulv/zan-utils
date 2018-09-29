@@ -4,15 +4,13 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "./formatLargeNumber", "./tozhCn"], factory);
+        define(["require", "exports", "./bem"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const formatLargeNumber_1 = require("./formatLargeNumber");
-    const tozhCn_1 = require("./tozhCn");
+    const bem_1 = require("./bem");
     exports.default = {
-        formatLargeNumber: formatLargeNumber_1.default,
-        tozhCn: tozhCn_1.default
+        bem: bem_1.default,
     };
 });

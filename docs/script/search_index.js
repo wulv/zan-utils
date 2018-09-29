@@ -20,7 +20,7 @@ window.esdocSearchIndex = [
   [
     "zan-utils/es/money/tozhcn.js~tozhcn",
     "function/index.html#static-function-tozhCN",
-    "<span>tozhCN</span> <span class=\"search-result-import-path\">zan-utils/es/money/tozhCn.js</span>",
+    "<span>tozhCN</span> <span class=\"search-result-import-path\">zan-utils/es/money/tozhCN.js</span>",
     "function"
   ],
   [
@@ -325,8 +325,8 @@ window.esdocSearchIndex = [
   ],
   [
     "es/money/tozhcn.js",
-    "file/es/money/tozhCn.js.html",
-    "es/money/tozhCn.js",
+    "file/es/money/tozhCN.js.html",
+    "es/money/tozhCN.js",
     "file"
   ],
   [

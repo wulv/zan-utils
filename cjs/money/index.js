@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const formatLargeNumber_1 = require("./formatLargeNumber");
-const tozhCn_1 = require("./tozhCn");
+const tozhCN_1 = require("./tozhCN");
 exports.default = {
     formatLargeNumber: formatLargeNumber_1.default,
-    tozhCn: tozhCn_1.default
+    tozhCN: tozhCN_1.default,
 };

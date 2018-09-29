@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 138,
+  "end": 139,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 138,
+    "end": 139,
     "loc": {
       "start": {
         "line": 1,
@@ -92,7 +92,7 @@
           },
           "extra": {
             "rawValue": "./formatLargeNumber",
-            "raw": "\"./formatLargeNumber\""
+            "raw": "'./formatLargeNumber'"
           },
           "value": "./formatLargeNumber"
         }
@@ -139,9 +139,9 @@
                   "line": 2,
                   "column": 13
                 },
-                "identifierName": "tozhCn"
+                "identifierName": "tozhCN"
               },
-              "name": "tozhCn"
+              "name": "tozhCN"
             }
           }
         ],
@@ -160,16 +160,16 @@
             }
           },
           "extra": {
-            "rawValue": "./tozhCn",
-            "raw": "\"./tozhCn\""
+            "rawValue": "./tozhCN",
+            "raw": "'./tozhCN'"
           },
-          "value": "./tozhCn"
+          "value": "./tozhCN"
         }
       },
       {
         "type": "ExportDefaultDeclaration",
         "start": 84,
-        "end": 137,
+        "end": 138,
         "loc": {
           "start": {
             "line": 3,
@@ -183,7 +183,7 @@
         "declaration": {
           "type": "ObjectExpression",
           "start": 99,
-          "end": 136,
+          "end": 137,
           "loc": {
             "start": {
               "line": 3,
@@ -280,9 +280,9 @@
                     "line": 5,
                     "column": 10
                   },
-                  "identifierName": "tozhCn"
+                  "identifierName": "tozhCN"
                 },
-                "name": "tozhCn"
+                "name": "tozhCN"
               },
               "value": {
                 "type": "Identifier",
@@ -297,9 +297,9 @@
                     "line": 5,
                     "column": 10
                   },
-                  "identifierName": "tozhCn"
+                  "identifierName": "tozhCN"
                 },
-                "name": "tozhCn"
+                "name": "tozhCN"
               },
               "extra": {
                 "shorthand": true
@@ -488,7 +488,7 @@
         "postfix": false,
         "binop": null
       },
-      "value": "tozhCn",
+      "value": "tozhCN",
       "start": 60,
       "end": 66,
       "loc": {
@@ -541,7 +541,7 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "./tozhCn",
+      "value": "./tozhCN",
       "start": 72,
       "end": 82,
       "loc": {
@@ -726,7 +726,7 @@
         "postfix": false,
         "binop": null
       },
-      "value": "tozhCn",
+      "value": "tozhCN",
       "start": 128,
       "end": 134,
       "loc": {
@@ -742,6 +742,32 @@
     },
     {
       "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 134,
+      "end": 135,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 10
+        },
+        "end": {
+          "line": 5,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
         "label": "}",
         "beforeExpr": false,
         "startsExpr": false,
@@ -752,8 +778,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 135,
-      "end": 136,
+      "start": 136,
+      "end": 137,
       "loc": {
         "start": {
           "line": 6,
@@ -778,8 +804,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 136,
-      "end": 137,
+      "start": 137,
+      "end": 138,
       "loc": {
         "start": {
           "line": 6,
@@ -804,8 +830,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 138,
-      "end": 138,
+      "start": 139,
+      "end": 139,
       "loc": {
         "start": {
           "line": 7,

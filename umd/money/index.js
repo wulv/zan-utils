@@ -4,13 +4,15 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "./chinaMobile"], factory);
+        define(["require", "exports", "./formatLargeNumber", "./tozhCN"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const chinaMobile_1 = require("./chinaMobile");
+    const formatLargeNumber_1 = require("./formatLargeNumber");
+    const tozhCN_1 = require("./tozhCN");
     exports.default = {
-        chinaMobile: chinaMobile_1.default
+        formatLargeNumber: formatLargeNumber_1.default,
+        tozhCN: tozhCN_1.default,
     };
 });

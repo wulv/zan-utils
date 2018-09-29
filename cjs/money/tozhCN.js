@@ -1,14 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
-* tozhCN 把字符串转成以分为单位的整数。
-* @memberof module:money
-* @param {number|string} num 金额
-* @returns {string} 中文大写的金额, 标准会计格式
-* @runkit true
-* @example
-* const tozhCN = require('zan-utils/money/tozhCN');
-* tozhCN(500.3);
-* // => 伍佰元叁角整
-*/
+ * tozhCN 把字符串转成以分为单位的整数。
+ * @memberof module:money
+ * @param {number|string} num 金额
+ * @returns {string} 中文大写的金额, 标准会计格式
+ * @runkit true
+ * @example
+ * const tozhCN = require('zan-utils/money/tozhCN');
+ * tozhCN(500.3);
+ * // => 伍佰元叁角整
+ */
 function tozhCN(num) {
     if (typeof num === 'number') {
         num = String(num);
@@ -16,7 +18,8 @@ function tozhCN(num) {
     if (!/^(0|[1-9]\d*)(\.\d+)?$/.test(num)) {
         throw new Error(`非法数据: ${JSON.stringify(num)}`);
     }
-    let unit = '京亿万仟佰拾兆万仟佰拾亿仟佰拾万仟佰拾元角分', str = '';
+    let unit = '京亿万仟佰拾兆万仟佰拾亿仟佰拾万仟佰拾元角分';
+    let str = '';
     num += '00';
     const pos = num.indexOf('.');
     if (pos >= 0) {
@@ -37,4 +40,4 @@ function tozhCN(num) {
         .replace(/^元零?|零分/g, '')
         .replace(/(元|角)$/g, '$1整');
 }
-export default tozhCN;
+exports.default = tozhCN;

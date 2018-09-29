@@ -1,30 +1,17 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 function toClass(classes, prefix = '') {
     if (typeof classes === 'string') {
         return (prefix + classes).trim();
     }
-    const arrClasses = Array.isArray(classes)
-        ? classes
-        : Object.keys(classes).filter(className => classes[className]);
+    const arrClasses = Array.isArray(classes) ? classes : Object.keys(classes).filter((className) => classes[className]);
     return arrClasses.reduce((prev, currClass) => `${prev ? `${prev} ` : ''}${prefix + currClass}`, '');
 }
-/**
- * @callback BemHOF
- * @param {string} [element='']
- * @param {string} [modifier='']
- * @param {string} [utils='']
- * @returns
- */
 /**
  * @memberof module:string
  * @desc
  * ##### 快速生成符合标准 bem 规范的 classnames
  *
+ * @example
  * 1、初始化 bem 生成器
- *
- * bem({ block:string, prefix?: string, elementPrefix?: string,  modifierPrefix?: string }): (element, modifier, utils) => string
- *
  * ```
  * // 生成器返回工具函数
  * const cx = bem({ block: 'prepaid' });
@@ -54,7 +41,7 @@ function toClass(classes, prefix = '') {
  *
  * quirkCx('root', 'active', 'float-right') // 'quirk~~root quirk~~root^^active float-right'
  * ```
- *
+ * @example
  * 2、生成的 bem 工具函数支持三种参数格式
  *
  * element, modifier, utils 都支持一下传参方式, 以 modifier 举例
@@ -71,29 +58,21 @@ function toClass(classes, prefix = '') {
  * // 'prepaid__main prepaid__main--active prepaid__main--disabled auto-width'
  * ```
  * @param {object} options
- * @param {string} options.[prefix]
- * @param {string} options.block
- * @param {string} options.[elementPrefix]
- * @param {string} options.[modifierPrefix]
- * @return {BemHOF}
+ * @param {string} [options.prefix=''] 前缀
+ * @param {string} options.block 模块
+ * @param {string} [options.elementPrefix='__'] 元素前缀
+ * @param {string} [options.modifierPrefix='--'] 修饰符前缀
+ * @returns {((element?: string, modifier?: string, utils?: string) => string)}
  */
-function bem({ prefix = '', block, elementPrefix = '__', modifierPrefix = '--' }) {
+function bem({ prefix = '', block, elementPrefix = '__', modifierPrefix = '--', }) {
     return function (element = '', modifier = '', utils = '') {
         const blockClass = `${prefix}${block}`;
-        const elementClass = element
-            ? toClass(element, blockClass + elementPrefix)
-            : '';
-        const blockModifier = modifier && !elementClass
-            ? ` ${toClass(modifier, blockClass + modifierPrefix)}`
-            : '';
-        const elementModifier = modifier && elementClass
-            ? ` ${toClass(modifier, elementClass + modifierPrefix)}`
-            : '';
+        const elementClass = element ? toClass(element, blockClass + elementPrefix) : '';
+        const blockModifier = modifier && !elementClass ? ` ${toClass(modifier, blockClass + modifierPrefix)}` : '';
+        const elementModifier = modifier && elementClass ? ` ${toClass(modifier, elementClass + modifierPrefix)}` : '';
         const utilsClass = utils ? ` ${toClass(utils)}` : '';
-        const bemClasses = element
-            ? elementClass + elementModifier
-            : blockClass + blockModifier;
+        const bemClasses = element ? elementClass + elementModifier : blockClass + blockModifier;
         return (bemClasses + utilsClass).trim();
     };
 }
-exports.default = bem;
+export default bem;

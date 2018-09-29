@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 77,
+  "end": 78,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 77,
+    "end": 78,
     "loc": {
       "start": {
         "line": 1,
@@ -100,7 +100,7 @@
       {
         "type": "ExportDefaultDeclaration",
         "start": 41,
-        "end": 76,
+        "end": 77,
         "loc": {
           "start": {
             "line": 2,
@@ -114,7 +114,7 @@
         "declaration": {
           "type": "ObjectExpression",
           "start": 56,
-          "end": 75,
+          "end": 76,
           "loc": {
             "start": {
               "line": 2,
@@ -433,6 +433,32 @@
     },
     {
       "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 73,
+      "end": 74,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 15
+        },
+        "end": {
+          "line": 3,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
         "label": "}",
         "beforeExpr": false,
         "startsExpr": false,
@@ -443,8 +469,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 74,
-      "end": 75,
+      "start": 75,
+      "end": 76,
       "loc": {
         "start": {
           "line": 4,
@@ -469,8 +495,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 75,
-      "end": 76,
+      "start": 76,
+      "end": 77,
       "loc": {
         "start": {
           "line": 4,
@@ -495,8 +521,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 77,
-      "end": 77,
+      "start": 78,
+      "end": 78,
       "loc": {
         "start": {
           "line": 5,

@@ -6,5 +6,5 @@ const validate_1 = require("./validate");
 exports.default = {
     money: money_1.default,
     string: string_1.default,
-    validate: validate_1.default
+    validate: validate_1.default,
 };

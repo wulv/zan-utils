@@ -4,5 +4,5 @@ import validate from './validate';
 export default {
     money,
     string,
-    validate
+    validate,
 };
