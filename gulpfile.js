@@ -3,7 +3,7 @@ const ts = require("gulp-typescript");
 const Esdoc = require("esdoc").default;
 const esdocConfig = require('./.esdoc.json');
 
-gulp.task('doc', function() {
+gulp.task('doc', ['build'], function() {
   Esdoc.generate(esdocConfig);
 });
 
@@ -17,7 +17,7 @@ gulp.task('typing', function () {
 
 gulp.task('build:es', function () {
   const tsProject = ts.createProject('tsconfig.json', {
-    module: 'esnext'
+    module: 'esnext',
   });
   const tsResult = tsProject.src().pipe(tsProject());
   return tsResult.js.pipe(gulp.dest('lib/es'));
@@ -25,7 +25,7 @@ gulp.task('build:es', function () {
 
 gulp.task('build:umd', function () {
   const tsProject = ts.createProject('tsconfig.json', {
-    module: 'umd'
+    module: 'umd',
   });
   const tsResult = tsProject.src().pipe(tsProject());
   return tsResult.js.pipe(gulp.dest('lib/umd'));
@@ -33,7 +33,7 @@ gulp.task('build:umd', function () {
 
 gulp.task('build:commonjs', function () {
   const tsProject = ts.createProject('tsconfig.json', {
-    module: 'commonjs'
+    module: 'commonjs',
   });
   const tsResult = tsProject.src().pipe(tsProject());
   return tsResult.js.pipe(gulp.dest('lib/cjs'));

@@ -1,7 +1,7 @@
-import formatLargeNumber from "./formatLargeNumber";
-import tozhCn from "./tozhCn";
+import formatLargeNumber from './formatLargeNumber';
+import tozhCN from './tozhCN';
 
 export default {
   formatLargeNumber,
-  tozhCn
-}
+  tozhCN,
+};

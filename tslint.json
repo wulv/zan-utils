@@ -5,6 +5,7 @@
     "no-var-keyword": true,
     "no-parameter-reassignment": false,
     "semicolon": [true, "always"],
+    "only-arrow-functions": false,
     "trailing-comma": [
       true,
       {
