@@ -9,7 +9,7 @@
  * tozhCN(500.3);
  * // => 伍佰元叁角整
  */
-function tozhCN(num: string|number): string {
+function tozhCN(num: string | number): string {
   if (typeof num === 'number') {
     num = String(num);
   }

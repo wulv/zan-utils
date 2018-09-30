@@ -7,7 +7,8 @@
   "esnext": "./es/index.js",
   "typings": "./typing/index.d.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "tslint -p tsconfig.json src/**/*.ts"
   },
   "author": "",
   "license": "ISC",

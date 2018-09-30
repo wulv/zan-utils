@@ -1,10 +1,14 @@
 {
   "defaultSeverity": "error",
-  "extends": ["tslint:recommended", "tslint-eslint-rules"],
+  "extends": [
+    "tslint:recommended",
+    "tslint-eslint-rules"
+  ],
   "rules": {
     "no-var-keyword": true,
     "no-parameter-reassignment": false,
     "semicolon": [true, "always"],
+    "no-shadowed-variable": false,
     "only-arrow-functions": false,
     "trailing-comma": [
       true,
@@ -28,6 +32,10 @@
     "quotemark": [true, "single"]
   },
   "linterOptions": {
-    "exclude": ["./lib", "node_module", "docs"]
+    "exclude": [
+      "./lib",
+      "node_module",
+      "docs"
+    ]
   }
 }
