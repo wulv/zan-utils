@@ -62,5 +62,6 @@ static
 dist
 docs
 
-# gulp-gh-pages cahce
+# cahce dir
 .publish
+es_temp
