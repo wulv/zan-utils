@@ -10,6 +10,8 @@
  */
 
 function chinaMobile(value: number | string): boolean {
-  return /^((\+86)|(86))?(13[0-9]|15[012356789]|17[3678]|18[0-9]|14[57])[0-9]{8}$/.test(String(value));
+  return /^((\+86)|(86))?(13[0-9]|15[012356789]|17[3678]|18[0-9]|14[57])[0-9]{8}$/.test(
+    String(value),
+  );
 }
 export default chinaMobile;

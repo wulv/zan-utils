@@ -55,5 +55,12 @@ jspm_packages/
 .env
 
 .idea/
-static
 .DS_Store
+
+# build files
+static
+dist
+docs
+
+# gulp-gh-pages cahce
+.publish

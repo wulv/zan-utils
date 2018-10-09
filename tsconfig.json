@@ -5,7 +5,8 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "declarationDir": "./typing",
-    "declaration": true
+    "declaration": true,
+    "sourceMap": false
   },
   "include": [
     "src/**/*"

@@ -9,9 +9,4 @@ describe('money:tozhCN', () => {
     const data = 'exception';
     expect(() => tozhCN(data)).toThrowError();
   });
-
-  test('object error', () => {
-    const data = { a: 1 };
-    expect(() => tozhCN(data as any)).toThrowError();
-  });
 });

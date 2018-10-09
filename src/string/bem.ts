@@ -3,9 +3,14 @@ function toClass(classes, prefix = '') {
     return (prefix + classes).trim();
   }
 
-  const arrClasses = Array.isArray(classes) ? classes : Object.keys(classes).filter((className) => classes[className]);
+  const arrClasses = Array.isArray(classes)
+    ? classes
+    : Object.keys(classes).filter(className => classes[className]);
 
-  return arrClasses.reduce((prev, currClass) => `${prev ? `${prev} ` : ''}${prefix + currClass}`, '');
+  return arrClasses.reduce(
+    (prev, currClass) => `${prev ? `${prev} ` : ''}${prefix + currClass}`,
+    '',
+  );
 }
 
 interface IBemOptions {
@@ -14,6 +19,7 @@ interface IBemOptions {
   elementPrefix?: string;
   modifierPrefix?: string;
 }
+
 /**
  * @memberof module:string
  * @desc
@@ -73,19 +79,30 @@ interface IBemOptions {
  * @param {string} [options.modifierPrefix='--'] 修饰符前缀
  * @returns {((element?: string, modifier?: string, utils?: string) => string)}
  */
-function bem({
-  prefix = '',
-  block,
-  elementPrefix = '__',
-  modifierPrefix = '--',
-}: IBemOptions): (element?: string, modifier?: string, utils?: string) => string {
+function bem(options: IBemOptions): (element?: string, modifier?: string, utils?: string) => string {
+  const {
+    prefix = '',
+    block,
+    elementPrefix = '__',
+    modifierPrefix = '--',
+  } = options;
   return function(element = '', modifier = '', utils = '') {
     const blockClass = `${prefix}${block}`;
-    const elementClass = element ? toClass(element, blockClass + elementPrefix) : '';
-    const blockModifier = modifier && !elementClass ? ` ${toClass(modifier, blockClass + modifierPrefix)}` : '';
-    const elementModifier = modifier && elementClass ? ` ${toClass(modifier, elementClass + modifierPrefix)}` : '';
+    const elementClass = element
+      ? toClass(element, blockClass + elementPrefix)
+      : '';
+    const blockModifier =
+      modifier && !elementClass
+        ? ` ${toClass(modifier, blockClass + modifierPrefix)}`
+        : '';
+    const elementModifier =
+      modifier && elementClass
+        ? ` ${toClass(modifier, elementClass + modifierPrefix)}`
+        : '';
     const utilsClass = utils ? ` ${toClass(utils)}` : '';
-    const bemClasses = element ? elementClass + elementModifier : blockClass + blockModifier;
+    const bemClasses = element
+      ? elementClass + elementModifier
+      : blockClass + blockModifier;
     return (bemClasses + utilsClass).trim();
   };
 }

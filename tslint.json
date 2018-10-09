@@ -2,11 +2,12 @@
   "defaultSeverity": "error",
   "extends": [
     "tslint:recommended",
+    "tslint-config-prettier",
     "tslint-eslint-rules"
   ],
+  "rulesDirectory": ["tslint-plugin-prettier"],
   "rules": {
-    "no-var-keyword": true,
-    "no-parameter-reassignment": false,
+    "no-unused-expression": false,
     "semicolon": [true, "always"],
     "no-shadowed-variable": false,
     "only-arrow-functions": false,
@@ -33,7 +34,7 @@
   },
   "linterOptions": {
     "exclude": [
-      "./lib",
+      "./dist",
       "node_module",
       "docs"
     ]
