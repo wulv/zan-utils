@@ -1,11 +1,6 @@
-import gulp from 'gulp';
-import requireDir from 'require-dir';
-
-// fix process env
+// set default process env variable
 if (!process.env.target) {
-  process.env.target = 'esnext';
+  process.env.target = 'es';
 }
 
-requireDir('./tasks');
-
-gulp.task('default', gulp.series('clean', 'build', 'typing', 'doc'));
+import('./tasks');

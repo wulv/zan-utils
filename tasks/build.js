@@ -1,11 +1,19 @@
 import gulp from 'gulp';
 import { createProject } from 'gulp-typescript';
 import babel from 'gulp-babel';
+import gulpIf from 'gulp-if';
+import newer from 'gulp-newer';
+import config from '../config';
 
 gulp.task('build', () => {
-  const tsProject = createProject('tsconfig.json', {
-    module: process.env.target,
-  });
+  const tsProject = createProject('tsconfig.json', config.jsTsconfig);
   const tsResult = tsProject.src().pipe(tsProject());
-  return tsResult.js.pipe(gulp.dest('es_temp')).pipe(babel()).pipe(gulp.dest('dist'));
+  return tsResult.js
+    .pipe(gulpIf(config.dev, newer({
+      dest: config.dist,
+      ext: '.js'
+    })))
+    .pipe(gulp.dest(config.esTemp))
+    .pipe(babel())
+    .pipe(gulp.dest(config.dist));
 });

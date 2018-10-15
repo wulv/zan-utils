@@ -1,7 +1,13 @@
 const baseConfig = require('./base');
-const devConfig = require('./dev');
-const prodConfig = require('./prod');
+const envConfig = require('./env');
+const esdoc = require('./esdoc');
+const targetConfig = require('./target');
+const packageRewrite = require('./package-rewrite');
 
-const isProd = process.env.NODE_ENV === 'production';
-const envConfig = isProd ? devConfig : prodConfig;
-module.exports = { ...baseConfig, ...envConfig };
+module.exports = {
+  ...baseConfig,
+  ...envConfig,
+  ...targetConfig,
+  packageRewrite,
+  esdoc,
+};

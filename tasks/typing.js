@@ -1,11 +1,9 @@
 import gulp from 'gulp';
 import { createProject } from 'gulp-typescript';
+import config from '../config';
 
 gulp.task('typing', () => {
-  const tsProject = createProject('tsconfig.json', {
-    module: process.env.target,
-    removeComments: true,
-  });
+  const tsProject = createProject('tsconfig.json', config.dtsTsconfig);
   const tsResult = tsProject.src().pipe(tsProject());
-  return tsResult.dts.pipe(gulp.dest('dist'));
+  return tsResult.dts.pipe(gulp.dest(config.dist));
 });

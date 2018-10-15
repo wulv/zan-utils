@@ -5,7 +5,6 @@
     "tslint-config-prettier",
     "tslint-eslint-rules"
   ],
-  "rulesDirectory": ["tslint-plugin-prettier"],
   "rules": {
     "no-unused-expression": false,
     "semicolon": [true, "always"],

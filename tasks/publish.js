@@ -1,11 +1,16 @@
 import gulp from 'gulp';
 import ghPages from 'gulp-gh-pages';
+import merge from 'gulp-merge';
+import jsonEditor from 'gulp-json-editor';
 import config from '../config';
 
 gulp.task('publish', () => {
-  return gulp.src([config.dist, 'package.json', 'README.md']).pipe(
+  return merge(
+    gulp.src('package.json').pipe(jsonEditor(config.packageRewrite)),
+    gulp.src([config.dist, ...config.static]),
+  ).pipe(
     ghPages({
-      branch: 'publish/test',
+      branch: config.branch,
     }),
   );
 });

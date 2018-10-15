@@ -75,13 +75,12 @@ interface IBemOptions {
  * @param {string} [options.modifierPrefix='--'] 修饰符前缀
  * @returns {((element?: string, modifier?: string, utils?: string) => string)}
  */
-function bem(options: IBemOptions): (element?: string, modifier?: string, utils?: string) => string {
-  const {
-    prefix = '',
-    block,
-    elementPrefix = '__',
-    modifierPrefix = '--',
-  } = options;
+function bem({
+  prefix = '',
+  block,
+  elementPrefix = '__',
+  modifierPrefix = '--',
+}: IBemOptions): (element?: string, modifier?: string, utils?: string) => string {
   return function(element = '', modifier = '', utils = '') {
     const blockClass = `${prefix}${block}`;
     const elementClass = element

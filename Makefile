@@ -1,8 +1,8 @@
 build:
-	NODE_ENV=production npx gulp
+	npx gulp
 
 dev:
-	NODE_ENV=development npx gulp watch
+	npx gulp dev
 
 test:
-	NODE_ENV=test npm run test
+	npm run test
