@@ -3,4 +3,4 @@ if (!process.env.target) {
   process.env.target = 'es';
 }
 
-import('./tasks');
+require('./tasks');
