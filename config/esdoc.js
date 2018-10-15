@@ -1,4 +1,7 @@
+const base = require('./base');
+
 module.exports = {
+  source: base.esTemp,
   destination: 'docs',
   plugins: [
     {

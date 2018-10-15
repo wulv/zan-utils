@@ -4,10 +4,8 @@ import config from '../config';
 
 function server() {
   return connect.server({
-    port: config.port,
-    debug: true,
+    ...config.connect,
     root: config.esdoc.destination,
-    livereload: config.livereload,
   });
 }
 

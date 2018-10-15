@@ -1,5 +1,8 @@
 module.exports = {
   dev: true,
-  port: 8001,
-  livereload: true,
+  connect: {
+    port: 8001,
+    debug: false,
+    livereload: true,
+  }
 };
