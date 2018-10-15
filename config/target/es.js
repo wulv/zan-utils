@@ -6,5 +6,6 @@ module.exports = {
     module: 'esnext',
     removeComments: true,
   },
+  babel: false,
   branch: 'publish/es',
 };

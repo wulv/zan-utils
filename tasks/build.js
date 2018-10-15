@@ -14,6 +14,6 @@ gulp.task('build', () => {
       ext: '.js'
     })))
     .pipe(gulp.dest(config.esTemp))
-    .pipe(babel())
+    .pipe(gulpIf(config.babel, babel(config.babel)))
     .pipe(gulp.dest(config.dist));
 });

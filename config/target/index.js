@@ -6,6 +6,7 @@ const target = process.env.target || 'es';
 const targetConfigMap = {
   es: esConfig,
   cjs: cjsConfig,
+  commonjs: cjsConfig,
 };
 
 /**

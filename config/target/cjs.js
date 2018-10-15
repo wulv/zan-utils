@@ -1,10 +1,18 @@
 module.exports = {
   jsTsconfig: {
-    module: 'commonjs',
+    module: 'esnext',
   },
   dtsTsconfig: {
-    module: 'commonjs',
+    module: 'esnext',
     removeComments: true,
+  },
+  babel: {
+    presets: [
+      ["@babel/env",{
+        modules: 'commonjs'
+      }]
+    ],
+    plugins: []
   },
   branch: 'publish/cjs',
 };
