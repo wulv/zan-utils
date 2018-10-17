@@ -1,5 +1,5 @@
 {
-  "name": "zan-utils-cjs",
+  "name": "zan-utils-es",
   "version": "1.0.0",
   "engines": {
     "node": ">=8.11.0"
