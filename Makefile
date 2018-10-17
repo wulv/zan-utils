@@ -1,3 +1,4 @@
+# default target
 target =
 ifdef target
 	target := $(target)
@@ -5,23 +6,22 @@ else
 	target := es
 endif
 
-env =
-ifdef env
-	env := $(env)
-else
-	env := development
-endif
-
-envCall = cross-env target=$(target) NODE_ENV=$(env)
+# run gulp function
+# arg1 target 打包目标模块
+# arg2 env 打包环境变量
+# arg3 task gulp任务名称
+define runGulp
+	npx cross-env target=$(1) NODE_ENV=$(2) gulp $(3)
+endef
 
 build:
-	npx $(envCall) gulp
+	$(call runGulp,$(target),production)
 
 dev:
-	npx $(envCall) gulp dev
+	$(call runGulp,$(target),development,dev)
 
 publish:
-	npx $(envCall) gulp publish
+	$(call runGulp,$(target),production,publish)
 
 lint:
 	npm run lint

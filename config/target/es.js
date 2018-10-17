@@ -1,4 +1,5 @@
 module.exports = {
+  // build config
   jsTsconfig: {
     module: 'esnext',
   },
@@ -7,5 +8,12 @@ module.exports = {
     removeComments: true,
   },
   babel: false,
+
+  // publish config
   branch: 'publish/es',
+  packageRewrite: {
+    name: 'zan-utils-cjs',
+    main: './index.js',
+    typings: './index.d.ts',
+  }
 };

@@ -48,4 +48,3 @@ make publish
 
 *Makefile接收参数：*
 1. target 打包目标模块类型，可选参数: es、cjs
-2. env 打包环境变量，可选参数: development、production
