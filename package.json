@@ -1,6 +1,6 @@
 {
   "name": "zan-utils-cjs",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "engines": {
     "node": ">=8.11.0"
   },
