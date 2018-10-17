@@ -12,8 +12,10 @@ module.exports = {
   // publish config
   branch: 'publish/es',
   packageRewrite: {
-    name: 'zan-utils-cjs',
+    name: 'zan-utils-es',
     main: './index.js',
     typings: './index.d.ts',
+    scripts: {},
+    devDependencies: {},
   }
 };

@@ -22,5 +22,7 @@ module.exports = {
     name: 'zan-utils-cjs',
     main: './index.js',
     typings: './index.d.ts',
+    scripts: {},
+    devDependencies: {},
   }
 };
