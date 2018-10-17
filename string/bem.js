@@ -1,23 +1,11 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-function toClass(classes) {
-  var prefix = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
-
-  if (typeof classes === 'string') {
-    return (prefix + classes).trim();
-  }
-
-  var arrClasses = Array.isArray(classes) ? classes : Object.keys(classes).filter(function (className) {
-    return classes[className];
-  });
-  return arrClasses.reduce(function (prev, currClass) {
-    return "".concat(prev ? "".concat(prev, " ") : '').concat(prefix + currClass);
-  }, '');
+function toClass(classes, prefix = '') {
+    if (typeof classes === 'string') {
+        return (prefix + classes).trim();
+    }
+    const arrClasses = Array.isArray(classes)
+        ? classes
+        : Object.keys(classes).filter(className => classes[className]);
+    return arrClasses.reduce((prev, currClass) => `${prev ? `${prev} ` : ''}${prefix + currClass}`, '');
 }
 /**
  * @memberof module:string
@@ -74,29 +62,23 @@ function toClass(classes) {
  * @param {string} [options.modifierPrefix='--'] 修饰符前缀
  * @returns {((element?: string, modifier?: string, utils?: string) => string)}
  */
-
-
-function bem(_ref) {
-  var _ref$prefix = _ref.prefix,
-      prefix = _ref$prefix === void 0 ? '' : _ref$prefix,
-      block = _ref.block,
-      _ref$elementPrefix = _ref.elementPrefix,
-      elementPrefix = _ref$elementPrefix === void 0 ? '__' : _ref$elementPrefix,
-      _ref$modifierPrefix = _ref.modifierPrefix,
-      modifierPrefix = _ref$modifierPrefix === void 0 ? '--' : _ref$modifierPrefix;
-  return function () {
-    var element = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-    var modifier = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
-    var utils = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
-    var blockClass = "".concat(prefix).concat(block);
-    var elementClass = element ? toClass(element, blockClass + elementPrefix) : '';
-    var blockModifier = modifier && !elementClass ? " ".concat(toClass(modifier, blockClass + modifierPrefix)) : '';
-    var elementModifier = modifier && elementClass ? " ".concat(toClass(modifier, elementClass + modifierPrefix)) : '';
-    var utilsClass = utils ? " ".concat(toClass(utils)) : '';
-    var bemClasses = element ? elementClass + elementModifier : blockClass + blockModifier;
-    return (bemClasses + utilsClass).trim();
-  };
+function bem({ prefix = '', block, elementPrefix = '__', modifierPrefix = '--', }) {
+    return function (element = '', modifier = '', utils = '') {
+        const blockClass = `${prefix}${block}`;
+        const elementClass = element
+            ? toClass(element, blockClass + elementPrefix)
+            : '';
+        const blockModifier = modifier && !elementClass
+            ? ` ${toClass(modifier, blockClass + modifierPrefix)}`
+            : '';
+        const elementModifier = modifier && elementClass
+            ? ` ${toClass(modifier, elementClass + modifierPrefix)}`
+            : '';
+        const utilsClass = utils ? ` ${toClass(utils)}` : '';
+        const bemClasses = element
+            ? elementClass + elementModifier
+            : blockClass + blockModifier;
+        return (bemClasses + utilsClass).trim();
+    };
 }
-
-var _default = bem;
-exports.default = _default;
+export default bem;

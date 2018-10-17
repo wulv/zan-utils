@@ -1,10 +1,3 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
 /**
  * 校验中国手机号
  * @memberof module:validate
@@ -16,8 +9,6 @@ exports.default = void 0;
  * chinaMobile('13170273187g'); // false
  */
 function chinaMobile(value) {
-  return /^((\+86)|(86))?(13[0-9]|15[012356789]|17[3678]|18[0-9]|14[57])[0-9]{8}$/.test(String(value));
+    return /^((\+86)|(86))?(13[0-9]|15[012356789]|17[3678]|18[0-9]|14[57])[0-9]{8}$/.test(String(value));
 }
-
-var _default = chinaMobile;
-exports.default = _default;
+export default chinaMobile;
