@@ -9,11 +9,15 @@ module.exports = {
   },
   babel: {
     presets: [
-      ["@babel/env",{
+      ['@babel/env',{
         modules: 'commonjs'
       }]
     ],
-    plugins: []
+    plugins: [
+      ['add-module-exports', {
+        addDefaultProperty: true
+      }]
+    ]
   },
 
   // publish config
