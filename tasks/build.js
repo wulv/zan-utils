@@ -9,13 +9,10 @@ gulp.task('build', () => {
   const tsProject = createProject('tsconfig.json', config.jsTsconfig);
   const tsResult = tsProject.src()
     .pipe(
-      gulpIf(
-        config.dev,
-        newer({
-          dest: config.dist,
-          ext: '.js',
-        }),
-      ),
+      gulpIf(config.dev, newer({
+        dest: config.dist,
+        ext: '.js',
+      })),
     )
     .pipe(tsProject());
   return tsResult.js

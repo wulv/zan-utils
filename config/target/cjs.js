@@ -19,7 +19,6 @@ module.exports = {
   // publish config
   branch: 'publish/cjs',
   packageRewrite: {
-    name: 'zan-utils-cjs',
     main: './index.js',
     typings: './index.d.ts',
     scripts: {},

@@ -19,4 +19,4 @@ function publishGit() {
   );
 }
 
-gulp.task('publish', gulp.series('default', publishGit));
+gulp.task('publish', gulp.series('clean', 'build', 'typing', publishGit));

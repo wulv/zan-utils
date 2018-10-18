@@ -10,16 +10,11 @@ function server() {
 }
 
 function livereload() {
-  return gulp.watch(config.dist, () =>
-    gulp.src(config.dist).pipe(connect.reload()),
-  );
+  return gulp.watch(config.dist, () => gulp.src(config.dist).pipe(connect.reload()));
 }
 
 function watch() {
   return gulp.watch(config.src, gulp.series('build', 'typing', 'doc'));
 }
 
-gulp.task(
-  'dev',
-  gulp.series('default', gulp.parallel(server, watch, livereload)),
-);
+gulp.task('dev', gulp.series('default', gulp.parallel(server, watch, livereload)));
