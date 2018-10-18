@@ -9,12 +9,16 @@
   "typings": "./dist/index.d.ts",
   "scripts": {
     "test": "jest",
-    "lint": "tslint -p tsconfig.json -t codeFrame src/**/*.ts",
-    "prepublish": "npm run test"
+    "lint": "tslint -p tsconfig.json"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/wulv/zan-utils.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   },
   "author": "",
   "license": "ISC",
@@ -39,6 +43,7 @@
     "gulp-json-editor": "^2.4.2",
     "gulp-newer": "^1.4.0",
     "gulp-typescript": "^5.0.0-alpha.3",
+    "husky": "^1.1.2",
     "jest": "^23.4.2",
     "merge2": "^1.2.3",
     "prettier": "^1.14.3",

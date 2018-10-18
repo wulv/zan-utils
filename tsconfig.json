@@ -4,7 +4,6 @@
     "target": "es6",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "declarationDir": "./typing",
     "declaration": true,
     "sourceMap": false
   },

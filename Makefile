@@ -11,17 +11,11 @@ runGulp = ./scripts/gulp.sh
 init-config:
 	./scripts/init-config.sh
 
-lint:
-	npm run lint
-
-test:
-	npm run test
-
 build:
 	$(runGulp) $(target) production
 
 dev:
 	$(runGulp) $(target) development dev
 
-publish: lint test
+publish:
 	./scripts/publish.sh
