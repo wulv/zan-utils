@@ -1,6 +1,6 @@
 {
   "name": "zan-utils-es",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "engines": {
     "node": ">=8.11.0"
   },
