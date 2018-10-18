@@ -1,5 +1,3 @@
-set -v on
-
 ./scripts/update-version.sh
 
 if [ $? -eq 0 ];then
