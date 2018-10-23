@@ -569,7 +569,7 @@
     "name": "lib/index.js",
     "content": "import money from './money/index';\nimport string from './string/index';\nimport validate from './validate/index';\nexport default {\n    money,\n    string,\n    validate\n};\n",
     "static": true,
-    "longname": "/Users/wulv/yz_env/webroot/zan-utils/lib/index.js",
+    "longname": "/Users/allen/Output/zan-utils/lib/index.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -580,7 +580,7 @@
     "name": "lib/money/formatLargeNumber.js",
     "content": "/**\n * 给大数字添加逗号分隔符\n * @param {number} value  待格式化的值\n * @returns {string} 格式化后的值\n * @example\n * const formatLargeNumber = require('zan-utils/money/formatLargeNumber');\n * formatLargeNumber(1000000);\n * // => '1,000,000'\n */\nfunction formatLargeNumber(value) {\n    return value.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, ',');\n}\nexport default formatLargeNumber;\n",
     "static": true,
-    "longname": "/Users/wulv/yz_env/webroot/zan-utils/lib/money/formatLargeNumber.js",
+    "longname": "/Users/allen/Output/zan-utils/lib/money/formatLargeNumber.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -636,7 +636,7 @@
     "name": "lib/money/index.js",
     "content": "import formatLargeNumber from \"./formatLargeNumber\";\nimport tozhCn from \"./tozhCn\";\nexport default {\n    formatLargeNumber,\n    tozhCn\n};\n",
     "static": true,
-    "longname": "/Users/wulv/yz_env/webroot/zan-utils/lib/money/index.js",
+    "longname": "/Users/allen/Output/zan-utils/lib/money/index.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -647,7 +647,7 @@
     "name": "lib/money/tozhCn.js",
     "content": "/**\n* tozhCN 把字符串转成以分为单位的整数。\n* @memberof module:money\n* @param {number|string} num 金额\n* @returns {string} 中文大写的金额, 标准会计格式\n* @runkit true\n* @example\n* const tozhCN = require('zan-utils/money/tozhCN');\n* tozhCN(500.3);\n* // => 伍佰元叁角整\n*/\nfunction tozhCN(num) {\n    if (typeof num === 'number') {\n        num = String(num);\n    }\n    if (!/^(0|[1-9]\\d*)(\\.\\d+)?$/.test(num)) {\n        throw new Error(`非法数据: ${JSON.stringify(num)}`);\n    }\n    let unit = '京亿万仟佰拾兆万仟佰拾亿仟佰拾万仟佰拾元角分', str = '';\n    num += '00';\n    const pos = num.indexOf('.');\n    if (pos >= 0) {\n        num = num.substring(0, pos) + num.substr(pos + 1, 2);\n    }\n    unit = unit.substr(unit.length - num.length);\n    for (let i = 0, len = num.length; i < len; i++) {\n        str += '零壹贰叁肆伍陆柒捌玖'.charAt(Number(num.charAt(i))) + unit.charAt(i);\n    }\n    return str\n        .replace(/零(仟|佰|拾|角)/g, '零')\n        .replace(/(零)+/g, '零')\n        .replace(/零(兆|万|亿|元)/g, '$1')\n        .replace(/(兆|亿)万/g, '$1')\n        .replace(/(京|兆)亿/g, '$1')\n        .replace(/(京)兆/g, '$1')\n        .replace(/(京|兆|亿|仟|佰|拾)(万?)(.)仟/g, '$1$2零$3仟')\n        .replace(/^元零?|零分/g, '')\n        .replace(/(元|角)$/g, '$1整');\n}\nexport default tozhCN;\n",
     "static": true,
-    "longname": "/Users/wulv/yz_env/webroot/zan-utils/lib/money/tozhCn.js",
+    "longname": "/Users/allen/Output/zan-utils/lib/money/tozhCn.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -708,7 +708,7 @@
     "name": "lib/string/bem.js",
     "content": "function toClass(classes, prefix = '') {\n    if (typeof classes === 'string') {\n        return (prefix + classes).trim();\n    }\n    const arrClasses = Array.isArray(classes)\n        ? classes\n        : Object.keys(classes).filter(className => classes[className]);\n    return arrClasses.reduce((prev, currClass) => `${prev ? `${prev} ` : ''}${prefix + currClass}`, '');\n}\n/**\n * @memberof module:string\n * @desc\n * ##### 快速生成符合标准 bem 规范的 classnames\n *\n * 1、初始化 bem 生成器\n *\n * bem({ block:string, prefix?: string, elementPrefix?: string,  modifierPrefix?: string }): (element, modifier, utils) => string\n *\n * ```\n * // 生成器返回工具函数\n * const cx = bem({ block: 'prepaid' });\n *\n * const zentCx = bem({ block: 'loading', prefix: 'zent-' });\n *\n * const quirkCx = bem({ block: 'quirk', elementPrefix: '~~', modifierPrefix: '^^' });\n *\n * // 输入 element\n * cx('main') // 'prepaid__main'\n *\n * zentCx('root') // 'zent-loading__root'\n *\n * quirkCx('root') // 'quirk~~root'\n *\n * // 输入 element + modifer\n * cx('main', 'active') // 'prepaid__main prepaid__main--active'\n *\n * zentCx('root', 'active') // 'zent-loading__root zent-loading__root--active'\n *\n * quirkCx('root', 'active') // 'quirk~~root quirk~~root^^active'\n *\n * // 输入 element + modifer + utils\n * cx('main', 'active', 'force-hide') // 'prepaid__main prepaid__main--active force-hide'\n *\n * zentCx('root', 'active' 'fixed') // 'zent-loading__root zent-loading__root--active fixed'\n *\n * quirkCx('root', 'active', 'float-right') // 'quirk~~root quirk~~root^^active float-right'\n * ```\n *\n * 2、生成的 bem 工具函数支持三种参数格式\n *\n * element, modifier, utils 都支持一下传参方式, 以 modifier 举例\n *\n * ```\n * // 输入字符串(假值等同于空字符串)\n * cx(null, 'active') // 'prepaid prepaid--active'\n *\n * // 输入数组, 平级展开\n * cx('main', ['active', 'show']) // 'prepaid__main prepaid__main--active prepaid__main--show'\n *\n * // 输入对象, 取第一级 key 并校验 Boolean(object[key]) 决定是否显示\n * cx('main', { active: true, show: false, disabled: { relative: true } }, 'auto-width')\n * // 'prepaid__main prepaid__main--active prepaid__main--disabled auto-width'\n * ```\n */\nfunction bem({ prefix = '', block, elementPrefix = '__', modifierPrefix = '--' }) {\n    return function (element = '', modifier = '', utils = '') {\n        const blockClass = `${prefix}${block}`;\n        const elementClass = element\n            ? toClass(element, blockClass + elementPrefix)\n            : '';\n        const blockModifier = modifier && !elementClass\n            ? ` ${toClass(modifier, blockClass + modifierPrefix)}`\n            : '';\n        const elementModifier = modifier && elementClass\n            ? ` ${toClass(modifier, elementClass + modifierPrefix)}`\n            : '';\n        const utilsClass = utils ? ` ${toClass(utils)}` : '';\n        const bemClasses = element\n            ? elementClass + elementModifier\n            : blockClass + blockModifier;\n        return (bemClasses + utilsClass).trim();\n    };\n}\nexport default bem;\n",
     "static": true,
-    "longname": "/Users/wulv/yz_env/webroot/zan-utils/lib/string/bem.js",
+    "longname": "/Users/allen/Output/zan-utils/lib/string/bem.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -795,7 +795,7 @@
     "name": "lib/string/index.js",
     "content": "import bem from './bem';\nexport default {\n    bem\n};\n",
     "static": true,
-    "longname": "/Users/wulv/yz_env/webroot/zan-utils/lib/string/index.js",
+    "longname": "/Users/allen/Output/zan-utils/lib/string/index.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -806,7 +806,7 @@
     "name": "lib/validate/chinaMobile.js",
     "content": "/**\n * 校验中国手机号\n * @memberof module:validate\n * @param {number|string} value - 手机号\n * @return {boolean}\n * @example\n * chinaMobile(13170273187); // true\n * chinaMobile('13170273187g'); // false\n */\nfunction chinaMobile(value) {\n    return /^((\\+86)|(86))?(13[0-9]|15[012356789]|17[3678]|18[0-9]|14[57])[0-9]{8}$/.test(String(value));\n}\nexport default chinaMobile;\n",
     "static": true,
-    "longname": "/Users/wulv/yz_env/webroot/zan-utils/lib/validate/chinaMobile.js",
+    "longname": "/Users/allen/Output/zan-utils/lib/validate/chinaMobile.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -857,23 +857,23 @@
     "name": "lib/validate/index.js",
     "content": "import chinaMobile from './chinaMobile';\nexport default {\n    chinaMobile\n};\n",
     "static": true,
-    "longname": "/Users/wulv/yz_env/webroot/zan-utils/lib/validate/index.js",
+    "longname": "/Users/allen/Output/zan-utils/lib/validate/index.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
     "kind": "index",
-    "content": "# zan-utils",
-    "longname": "/Users/wulv/yz_env/webroot/zan-utils/README.md",
+    "content": "# zan-utils\n\n[![Build Status](https://travis-ci.org/wulv/del-expired-file.png)](https://travis-ci.org/wulv/del-expired-file)\n[![Coverage Status](https://img.shields.io/coveralls/wulv/del-expired-file/master.svg?style=flat)](https://coveralls.io/github/wulv/del-expired-file?branch=master)",
+    "longname": "/Users/allen/Output/zan-utils/README.md",
     "name": "./README.md",
     "static": true,
     "access": "public"
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"zan-utils\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"author\": \"\",\n  \"license\": \"ISC\",\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"dts-generator\": \"^2.1.0\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"esdoc-typescript-plugin\": \"^1.0.1\",\n    \"gulp\": \"^3.9.1\",\n    \"gulp-typescript\": \"^5.0.0-alpha.3\",\n    \"typescript\": \"^3.0.1\"\n  }\n}\n",
-    "longname": "/Users/wulv/yz_env/webroot/zan-utils/package.json",
+    "content": "{\n  \"name\": \"zan-utils\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"jest\",\n    \"cover\": \"istanbul cover ./node_modules/jest/bin\",\n    \"coveralls\": \"npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls\"\n  },\n  \"author\": \"\",\n  \"license\": \"ISC\",\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"coveralls\": \"^3.0.2\",\n    \"dts-generator\": \"^2.1.0\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-inject-style-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"esdoc-typescript-plugin\": \"^1.0.1\",\n    \"gulp\": \"^3.9.1\",\n    \"gulp-typescript\": \"^5.0.0-alpha.3\",\n    \"istanbul\": \"^0.4.5\",\n    \"jest\": \"^23.4.2\",\n    \"typescript\": \"^3.0.1\"\n  }\n}\n",
+    "longname": "/Users/allen/Output/zan-utils/package.json",
     "name": "package.json",
     "static": true,
     "access": "public"
