@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "cover": "istanbul cover ./node_modules/jest/bin",
+    "cover": "istanbul cover ./node_modules/jest/bin/jest.js",
     "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "@types/jest": "^23.3.7",
     "coveralls": "^3.0.2",
     "dts-generator": "^2.1.0",
     "esdoc": "^1.1.0",
@@ -22,6 +23,7 @@
     "gulp-typescript": "^5.0.0-alpha.3",
     "istanbul": "^0.4.5",
     "jest": "^23.4.2",
+    "ts-jest": "^23.10.4",
     "typescript": "^3.0.1"
   }
 }
