@@ -4,18 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "cover": "istanbul cover ./node_modules/jest/bin",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "coveralls": "^3.0.2",
     "dts-generator": "^2.1.0",
     "esdoc": "^1.1.0",
+    "esdoc-inject-style-plugin": "^1.0.0",
     "esdoc-standard-plugin": "^1.0.0",
     "esdoc-typescript-plugin": "^1.0.1",
     "gulp": "^3.9.1",
     "gulp-typescript": "^5.0.0-alpha.3",
+    "istanbul": "^0.4.5",
     "jest": "^23.4.2",
     "typescript": "^3.0.1"
   }
