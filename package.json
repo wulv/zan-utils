@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "./node_modules/.bin/esdoc",
     "test": "jest",
     "cover": "istanbul cover ./node_modules/jest/bin/jest.js",
     "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
