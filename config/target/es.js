@@ -7,6 +7,7 @@ module.exports = {
     module: 'esnext',
     removeComments: true,
   },
+  dtsPlugins: [],
   babel: false,
 
   // publish config
