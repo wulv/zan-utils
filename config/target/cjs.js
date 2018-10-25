@@ -2,14 +2,18 @@ const dtsExport = require('../plugins/dts-export');
 
 module.exports = {
   // build config
-  jsTsconfig: {
-    module: 'esnext',
+  js: {
+    tsconfig: {
+      module: 'esnext',
+    },
   },
-  dtsTsconfig: {
-    module: 'esnext',
-    removeComments: true,
+  dts: {
+    tsconfig: {
+      module: 'esnext',
+      removeComments: true,
+    },
+    plugins: [dtsExport()],
   },
-  dtsPlugins: [dtsExport()],
   babel: {
     presets: [
       ['@babel/env',{

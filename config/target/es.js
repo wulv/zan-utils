@@ -1,13 +1,17 @@
 module.exports = {
   // build config
-  jsTsconfig: {
-    module: 'esnext',
+  js: {
+    tsconfig: {
+      module: 'esnext',
+    },
   },
-  dtsTsconfig: {
-    module: 'esnext',
-    removeComments: true,
+  dts: {
+    tsconfig: {
+      module: 'esnext',
+      removeComments: true,
+    },
+    plugins: [],
   },
-  dtsPlugins: [],
   babel: false,
 
   // publish config

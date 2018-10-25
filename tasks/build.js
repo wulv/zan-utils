@@ -6,7 +6,7 @@ import newer from 'gulp-newer';
 import config from '../config';
 
 gulp.task('build', () => {
-  const tsProject = createProject('tsconfig.json', config.jsTsconfig);
+  const tsProject = createProject('tsconfig.json', config.js.tsconfig);
   const tsResult = tsProject.src()
     .pipe(
       gulpIf(config.dev, newer({
