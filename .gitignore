@@ -64,4 +64,5 @@ docs
 
 # cahce dir
 .publish
+.pulish-doc
 es_temp

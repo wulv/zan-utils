@@ -17,3 +17,4 @@ do
   ./scripts/gulp.sh $name production publish && ./scripts/publish-npm.sh $name
 done
 
+./scripts/publish-doc.sh
