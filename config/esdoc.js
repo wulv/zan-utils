@@ -5,12 +5,6 @@ module.exports = {
   destination: 'docs',
   plugins: [
     {
-      "name": "esdoc-typescript-plugin",
-      "option": {
-        "enable": false
-      }
-    },
-    {
       "name": "esdoc-standard-plugin"
     },
     {
