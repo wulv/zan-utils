@@ -1,6 +1,6 @@
 # !/bin/sh
 
-# git clone -b gh-pages git@github.com:wulv/zan-utils.git .publish-doc
+git clone -b gh-pages git@github.com:wulv/zan-utils.git .publish-doc
 
 rm -rf ./docs
 npx cross-env NODE_ENV="production" gulp doc
@@ -24,5 +24,5 @@ fi
 
 git add .
 git commit -m "update doc-$version"
-# git push origin gh-pages
-# rm -rf .publish-doc
+git push origin gh-pages
+rm -rf .publish-doc
