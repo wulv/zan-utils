@@ -8,13 +8,8 @@ npx cross-env NODE_ENV="production" gulp doc
 version=`cat ./package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | sed 's/^[ \t]*//g'`
 publishVersion=`cat ./package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | sed 's/^[ \t]*//g' | awk -F. '{ print $1}'`
 
-echo "------version=$version"
-echo "------publishVersion=$publishVersion"
-
 cd .publish-doc
 docVersionTag=`ls | grep "$publishVersion.x.x" | head -1`
-
-echo "------docVersionTag=$docVersionTag"
 
 if [[ "$docVersionTag" != "" ]]; then
   rm -rf $docVersionTag
