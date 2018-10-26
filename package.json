@@ -1,22 +1,56 @@
 {
   "name": "zan-utils",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.5",
+  "engines": {
+    "node": ">=8.11.0"
+  },
+  "description": "Utilities for youzan front-end development",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wulv/zan-utils.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   },
   "author": "",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "dts-generator": "^2.1.0",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "@types/jest": "^23.3.2",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "cross-env": "^5.2.0",
+    "del": "^3.0.0",
     "esdoc": "^1.1.0",
     "esdoc-standard-plugin": "^1.0.0",
-    "esdoc-typescript-plugin": "^1.0.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-connect": "^5.6.1",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-if": "^2.0.2",
+    "gulp-json-editor": "^2.4.2",
+    "gulp-newer": "^1.4.0",
     "gulp-typescript": "^5.0.0-alpha.3",
+    "husky": "^1.1.2",
     "jest": "^23.4.2",
+    "merge2": "^1.2.3",
+    "prettier": "^1.14.3",
+    "ts-jest": "^23.10.2",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-eslint-rules": "^5.4.0",
     "typescript": "^3.0.1"
   }
 }

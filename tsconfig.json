@@ -1,12 +1,17 @@
 {
   "compilerOptions": {
-      "target": "ES6"
+    "alwaysStrict": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "sourceMap": false
   },
   "include": [
-      "src/**/*"
+    "src/**/*.ts"
   ],
   "exclude": [
-      "node_modules",
-      "**/*.spec.ts"
+    "node_modules",
+    "**/__tests__/**/*.test.ts"
   ]
 }
