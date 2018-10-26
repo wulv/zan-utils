@@ -8,7 +8,6 @@
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "scripts": {
-    "build": "./node_modules/.bin/esdoc",
     "test": "jest",
     "lint": "tslint -p tsconfig.json",
     "cover": "istanbul cover ./node_modules/jest/bin/jest.js",
@@ -35,7 +34,6 @@
     "coveralls": "^3.0.2",
     "cross-env": "^5.2.0",
     "del": "^3.0.0",
-    "dts-generator": "^2.1.0",
     "esdoc": "^1.1.0",
     "esdoc-inject-style-plugin": "^1.0.0",
     "esdoc-standard-plugin": "^1.0.0",
