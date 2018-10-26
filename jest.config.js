@@ -1,31 +1,11 @@
-// For a detailed explanation regarding each configuration property, visit:
-// https://jestjs.io/docs/en/configuration.html
-
 module.exports = {
-  // All imported modules in your tests should be mocked automatically
-  // automock: false,
-
-  // Stop running tests after the first failure
-  // bail: false,
-
-  // Respect "browser" field in package.json when resolving modules
-  // browser: false,
-
-  // The directory where Jest should store its cached dependency information
-  // cacheDirectory: "/var/folders/r9/zjpp8rdn5tgff6qp9my40sh00000gn/T/jest_dx",
-
+  preset: 'ts-jest',
+  testEnvironment: 'node',
   // Automatically clear mock calls and instances between every test
   clearMocks: true,
-
-  // Indicates whether the coverage information should be collected while executing the test
-  // collectCoverage: false,
-
-  // An array of glob patterns indicating a set of files for which coverage information should be collected
-  // collectCoverageFrom: null,
-
   // The directory where Jest should output its coverage files
+  collectCoverage: true,
   coverageDirectory: "coverage",
-
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
   //   "/node_modules/"
@@ -183,4 +163,11 @@ module.exports = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
+  coverageReporters: ["html", "json"],
+  testMatch: [
+    "**/__tests__/**/*.test.ts",
+  ],
+  testPathIgnorePatterns: [
+    "/node_modules/"
+  ],
 };
