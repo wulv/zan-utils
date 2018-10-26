@@ -9,7 +9,9 @@
   "typings": "./dist/index.d.ts",
   "scripts": {
     "test": "jest",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "cover": "istanbul cover ./node_modules/jest/bin/jest.js",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -29,9 +31,11 @@
     "@babel/register": "^7.0.0",
     "@types/jest": "^23.3.2",
     "babel-plugin-add-module-exports": "^1.0.0",
+    "coveralls": "^3.0.2",
     "cross-env": "^5.2.0",
     "del": "^3.0.0",
     "esdoc": "^1.1.0",
+    "esdoc-inject-style-plugin": "^1.0.0",
     "esdoc-standard-plugin": "^1.0.0",
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
@@ -44,6 +48,7 @@
     "gulp-newer": "^1.4.0",
     "gulp-typescript": "^5.0.0-alpha.3",
     "husky": "^1.1.2",
+    "istanbul": "^0.4.5",
     "jest": "^23.4.2",
     "merge2": "^1.2.3",
     "prettier": "^1.14.3",

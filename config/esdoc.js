@@ -5,7 +5,14 @@ module.exports = {
   destination: 'docs',
   plugins: [
     {
-      name: 'esdoc-standard-plugin',
+      "name": "esdoc-standard-plugin"
     },
+    {
+      "name": "esdoc-inject-style-plugin",
+      "option": {
+        "enable": false,
+        "styles": ["./bulma.css"]
+      }
+    }
   ],
 };
