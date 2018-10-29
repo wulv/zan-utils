@@ -1,7 +1,8 @@
 module.exports = {
-  dev: true,
+  prod: false,
   connect: {
-    port: 8001,
+    port: parseInt(process.env.PORT) || 8001,
+    host: '127.0.0.1',
     debug: false,
     livereload: true,
   }
