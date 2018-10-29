@@ -1,4 +1,4 @@
-import tozhCN from '../tozhCN';
+import tozhCN from 'src/money/tozhCN';
 
 describe('money:tozhCN', () => {
   test('100', () => {

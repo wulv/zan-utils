@@ -1,11 +1,13 @@
 module.exports = {
   // build config
   js: {
+    tsconfigFile: 'tsconfig.build.json',
     tsconfig: {
       module: 'esnext',
     },
   },
   dts: {
+    tsconfigFile: 'tsconfig.build.json',
     tsconfig: {
       module: 'esnext',
       removeComments: true,
