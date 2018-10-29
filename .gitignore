@@ -63,7 +63,7 @@ dist
 docs
 
 # ide
-.vscode/settings.json
+.vscode
 
 # cahce dir
 .publish
