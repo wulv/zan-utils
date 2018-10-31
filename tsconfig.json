@@ -5,13 +5,17 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "declaration": true,
-    "sourceMap": false
+    "sourceMap": false,
+    "baseUrl": ".",
+    "paths": {
+      "src/": ["./src/*"]
+    }
   },
   "include": [
-    "src/**/*.ts"
+    "./src",
+    "./tests"
   ],
   "exclude": [
-    "node_modules",
-    "**/__tests__/**/*.test.ts"
+    "node_modules"
   ]
 }

@@ -3,11 +3,13 @@ const dtsExport = require('../plugins/dts-export');
 module.exports = {
   // build config
   js: {
+    tsconfigFile: 'tsconfig.build.json',
     tsconfig: {
       module: 'esnext',
     },
   },
   dts: {
+    tsconfigFile: 'tsconfig.build.json',
     tsconfig: {
       module: 'esnext',
       removeComments: true,
@@ -30,6 +32,7 @@ module.exports = {
   // publish config
   branch: 'publish/cjs',
   packageRewrite: {
+    name: 'zan-utils-cjs',
     main: './index.js',
     typings: './index.d.ts',
     scripts: {},

@@ -7,13 +7,13 @@ import config from '../config';
 function publishGit() {
   return merge(
     gulp.src('package.json').pipe(jsonEditor((json) => {
-      return Object.assign({}, json, config.packageRewrite)
+      return Object.assign({}, json, config.target.packageRewrite)
     })),
-    gulp.src([config.dist + '/**', ...config.static]),
+    gulp.src([config.base.dist + '/**', ...config.base.static]),
   ).pipe(
     ghPages({
-      branch: config.branch,
-      cacheDir: config.publishCache,
+      branch: config.target.branch,
+      cacheDir: config.base.publishCache,
       push: false,
     }),
   );

@@ -1,11 +1,11 @@
-const baseConfig = require('./base');
-const envConfig = require('./env');
+const base = require('./base');
+const env = require('./env');
 const esdoc = require('./esdoc');
-const targetConfig = require('./target');
+const target = require('./target');
 
 module.exports = {
-  ...baseConfig,
-  ...envConfig,
-  ...targetConfig,
+  base,
+  env,
+  target,
   esdoc,
 };

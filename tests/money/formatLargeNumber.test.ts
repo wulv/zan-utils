@@ -1,4 +1,4 @@
-import formatLargeNumber from '../formatLargeNumber';
+import formatLargeNumber from 'src/money/formatLargeNumber';
 
 describe('money:formatLargeNumber', () => {
   test('normal number', () => {

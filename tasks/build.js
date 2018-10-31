@@ -6,17 +6,17 @@ import newer from 'gulp-newer';
 import config from '../config';
 
 gulp.task('build', () => {
-  const tsProject = createProject('tsconfig.json', config.js.tsconfig);
+  const tsProject = createProject(config.target.js.tsconfigFile, config.target.js.tsconfig);
   const tsResult = tsProject.src()
     .pipe(
-      gulpIf(config.dev, newer({
-        dest: config.dist,
+      gulpIf(!config.env.prod, newer({
+        dest: config.base.dist,
         ext: '.js',
       })),
     )
     .pipe(tsProject());
   return tsResult.js
-    .pipe(gulp.dest(config.esTemp))
-    .pipe(gulpIf(config.babel, babel(config.babel)))
-    .pipe(gulp.dest(config.dist));
+    .pipe(gulp.dest(config.base.esTemp))
+    .pipe(gulpIf(config.target.babel, babel(config.target.babel)))
+    .pipe(gulp.dest(config.base.dist));
 });

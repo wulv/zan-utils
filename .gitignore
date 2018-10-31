@@ -62,6 +62,9 @@ static
 dist
 docs
 
+# ide
+.vscode
+
 # cahce dir
 .publish
 .pulish-doc
