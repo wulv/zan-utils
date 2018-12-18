@@ -22,11 +22,10 @@ interface IBemOptions {
 
 /**
  * @memberof module:string
- * @desc
- * ##### 快速生成符合标准 bem 规范的 classnames
+ * @desc 快速生成符合标准 bem 规范的 classnames
  *
- * 1、初始化 bem 生成器
  * @example
+ * 1、初始化 bem 生成器
  * // 生成器返回工具函数
  * const cx = bem({ block: 'prepaid' });
  *

@@ -2,17 +2,41 @@ const base = require('./base');
 
 module.exports = {
   source: base.esTemp,
+  package: './package.json',
+  index: './README.md',
   destination: 'docs',
   plugins: [
     {
-      name: 'esdoc-standard-plugin',
+      name: 'esdoc-coverage-plugin',
+      option: {
+        enable: true,
+        kind: ['class', 'method', 'member', 'get', 'set', 'constructor', 'function', 'variable'],
+      },
     },
     {
-      name: 'esdoc-inject-style-plugin',
+      name: 'esdoc-brand-plugin',
       option: {
-        enable: false,
-        styles: ['assets/bulma.css'],
+        title: '有赞工具函数库',
+        description: '有赞工具函数库',
+        repository: 'https://github.com/wulv/zan-utils.git',
+        site: 'wulv.github.io/zan-utils',
+        author: 'wulv@youzan.com',
       },
+    },
+    {
+      name: 'esdoc-importpath-plugin',
+      option: {
+        replaces: [{ from: 'es_temp/', to: '' }],
+      },
+    },
+    {
+      name: 'esdoc-publish-html-plugin',
+      option: {
+        template: './template',
+      },
+    },
+    {
+      name: 'esdoc-standard-plugin',
     },
   ],
 };
